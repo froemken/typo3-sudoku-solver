@@ -4,8 +4,8 @@
 		<header/>
 		<body>
 			<trans-unit id="plugin.sudoku.title">
-				<source>Sudoku</source>
-				<target>Sudoku</target>
+				<source>Sudoku Solver</source>
+				<target>Sudoku Solver</target>
 			</trans-unit>
 			<trans-unit id="plugin.glossary.description">
 				<source>Shows a plugin to enter the values for your sudoku to solve</source>
