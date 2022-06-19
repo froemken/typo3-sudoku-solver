@@ -1,0 +1,35 @@
+{
+	"name": "stefanfroemken/typo3-sudoku-solver",
+	"type": "typo3-cms-extension",
+	"description": "Sudoku Solver",
+	"homepage": "https://www.typo3lexikon.de/",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [
+		{
+			"name": "Stefan Froemken",
+			"email": "froemken@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/froemken/typo3-sudoku-solver/issues",
+		"source": "https://github.com/froemken/typo3-sudoku-solver"
+	},
+	"require": {
+		"typo3/cms-core": "^11.5",
+		"stefanfroemken/sudoku-solver": "dev-main"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-latest"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "sudoku_solver"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"StefanFroemken\\Typo3SudokuSolver\\": "Classes/"
+		}
+	}
+}

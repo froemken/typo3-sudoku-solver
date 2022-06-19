@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-06-19T22:49:07Z" product-name="sudoku_solver">
+		<header/>
+		<body>
+			<trans-unit id="plugin.sudoku.title">
+				<source>Sudoku</source>
+			</trans-unit>
+			<trans-unit id="plugin.glossary.description">
+				<source>Shows a plugin to enter the values for your sudoku to solve</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
