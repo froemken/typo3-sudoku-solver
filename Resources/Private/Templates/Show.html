@@ -1,0 +1,75 @@
+<html lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="main">
+    <div>
+        <button type="button" class="btnSolve btn btn-primary">Solve</button>
+        <button type="button" class="btnHint btn btn-primary">Hint</button>
+    </div>
+    <div class="message"></div>
+    <table class="sudoku-solver table table-bordered table-sm align-middle border border-5">
+        <tbody>
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        <f:render section="renderRow" arguments="{class: 'border-5'}" />
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        <f:render section="renderRow" arguments="{class: 'border-5'}" />
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        <f:render section="renderRow" arguments="{class: 'border-3'}" />
+        </tbody>
+    </table>
+
+    <div class="invisible">
+        <table id="sudokuNumbers" class="table table-bordered table-sm align-middle border border-3">
+            <tbody>
+            <tr>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">1</span></td>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">2</span></td>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">3</span></td>
+            </tr>
+            <tr>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">4</span></td>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">5</span></td>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">6</span></td>
+            </tr>
+            <tr>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">7</span></td>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">8</span></td>
+                <td class="border border-3 text-center"><span class="btn btn-secondary">9</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</f:section>
+
+<f:section name="renderRow">
+    <tr class="{class} border-top-0 border-start-0 border-end-0">
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-5 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-5 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+        <f:render section="renderCell" arguments="{class: 'border-3 border-top-0 border-bottom-0 border-start-0'}" />
+    </tr>
+</f:section>
+
+<f:section name="renderCell">
+    <td class="border {class} text-center">
+        <span type="button"
+              class="btn btn-secondary"
+              data-html="true"
+              data-bs-toggle="popover"
+              title="Choose value"
+              data-bs-content="#sudokuNumbers">
+            0
+        </span>
+    </td>
+</f:section>

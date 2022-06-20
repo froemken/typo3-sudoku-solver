@@ -1,0 +1,10 @@
+plugin.tx_sudokusolver {
+  view {
+    # cat=plugin.tx_tx_sudokusolver/file; type=string; label=Path to template root (FE)
+    templateRootPath = EXT:sudoku_solver/Resources/Private/Templates/
+    # cat=plugin.tx_tx_sudokusolver/file; type=string; label=Path to template partials (FE)
+    partialRootPath = EXT:sudoku_solver/Resources/Private/Partials/
+    # cat=plugin.tx_sudokusolver/file; type=string; label=Path to template layouts (FE)
+    layoutRootPath = EXT:sudoku_solver/Resources/Private/Layouts/
+  }
+}

@@ -1,0 +1,22 @@
+page.includeJSFooter {
+  sudokuSolver = EXT:sudoku_solver/Resources/Public/JavaScript/Sudoku.js
+}
+
+plugin.tx_sudokusolver {
+  view {
+    templateRootPaths {
+      0 = EXT:tx_sudokusolver/Resources/Private/Templates/
+      1 = {$plugin.tx_sudokusolver.view.templateRootPath}
+    }
+    partialRootPaths {
+      0 = EXT:tx_sudokusolver/Resources/Private/Partials/
+      1 = {$plugin.tx_sudokusolver.view.partialRootPath}
+    }
+    layoutRootPaths {
+      0 = EXT:tx_sudokusolver/Resources/Private/Layouts/
+      1 = {$plugin.tx_sudokusolver.view.layoutRootPath}
+    }
+  }
+  settings {
+  }
+}
